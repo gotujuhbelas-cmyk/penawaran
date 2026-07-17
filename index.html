@@ -173,17 +173,10 @@
             transition: var(--transition);
             border-radius: 2px;
         }
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-        }
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -6px);
-        }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -6px); }
 
-        /* MOBILE MENU OVERLAY */
         .mobile-menu {
             position: fixed;
             top: 0;
@@ -198,51 +191,27 @@
             box-shadow: -10px 0 40px rgba(0,0,0,0.1);
             overflow-y: auto;
         }
-        .mobile-menu.active {
-            right: 0;
-        }
+        .mobile-menu.active { right: 0; }
         .mobile-menu-overlay {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
+            top: 0; left: 0;
+            width: 100%; height: 100vh;
             background: rgba(0,0,0,0.5);
             z-index: 998;
-            opacity: 0;
-            visibility: hidden;
+            opacity: 0; visibility: hidden;
             transition: opacity 0.3s, visibility 0.3s;
         }
-        .mobile-menu-overlay.active {
-            opacity: 1;
-            visibility: visible;
-        }
-        .mobile-menu ul {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
+        .mobile-menu-overlay.active { opacity: 1; visibility: visible; }
+        .mobile-menu ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
         .mobile-menu ul li a {
-            display: block;
-            padding: 1rem;
-            text-decoration: none;
-            color: var(--text);
-            font-weight: 600;
-            font-size: 1.1rem;
-            border-radius: 8px;
-            transition: background 0.2s;
+            display: block; padding: 1rem; text-decoration: none;
+            color: var(--text); font-weight: 600; font-size: 1.1rem;
+            border-radius: 8px; transition: background 0.2s;
         }
-        .mobile-menu ul li a:hover {
-            background: var(--accent);
-            color: var(--primary);
-        }
+        .mobile-menu ul li a:hover { background: var(--accent); color: var(--primary); }
         .mobile-menu-actions {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            margin-top: 2rem;
-            padding-top: 2rem;
+            display: flex; flex-direction: column; gap: 1rem;
+            margin-top: 2rem; padding-top: 2rem;
             border-top: 1px solid var(--border);
         }
 
@@ -314,6 +283,61 @@
         .feature-list { list-style: none; margin: 1.5rem 0; flex-grow: 1; }
         .feature-list li { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; color: var(--text); }
         .feature-list li svg { color: var(--primary-light); flex-shrink: 0; }
+
+        /* ARM ROLL BOX HIGHLIGHT */
+        .fleet-highlight {
+            background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%);
+            border: 2px solid var(--primary-light);
+            border-radius: 12px;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        .fleet-highlight-icon {
+            width: 48px;
+            height: 48px;
+            min-width: 48px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .fleet-highlight-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke-width: 2;
+        }
+        .fleet-highlight-content h5 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 0.25rem;
+        }
+        .fleet-highlight-content p {
+            font-size: 0.9rem;
+            color: var(--primary-dark);
+            margin: 0;
+            line-height: 1.5;
+        }
+        .fleet-benefits {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.75rem;
+        }
+        .fleet-benefit-tag {
+            background: white;
+            color: var(--primary-dark);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border: 1px solid var(--primary-light);
+        }
 
         .comparison-table {
             width: 100%; border-collapse: separate; border-spacing: 0;
@@ -412,7 +436,6 @@
             display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem;
         }
 
-        /* Print Controls */
         .print-controls {
             position: fixed; top: 100px; right: 20px;
             z-index: 999; display: flex; flex-direction: column; gap: 10px;
@@ -430,22 +453,19 @@
             background: linear-gradient(135deg, #047857 0%, #059669 100%);
             transform: translateY(-2px); box-shadow: 0 6px 16px rgba(5, 150, 105, 0.4);
         }
-        .print-btn.print-alt {
-            background: linear-gradient(135deg, #0D9488 0%, #14B8A6 100%);
-        }
+        .print-btn.print-alt { background: linear-gradient(135deg, #0D9488 0%, #14B8A6 100%); }
         .print-info {
             background: white; padding: 10px; border-radius: 8px;
             font-size: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); max-width: 200px;
         }
 
-        /* RESPONSIVE - TABLET */
+        /* RESPONSIVE */
         @media (max-width: 1024px) {
             .nav-links { display: none; }
             .hamburger { display: flex; }
             .footer-grid { grid-template-columns: 1fr 1fr; }
         }
 
-        /* RESPONSIVE - MOBILE */
         @media (max-width: 768px) {
             .container { padding: 0 1rem; }
             .section { padding: 4rem 0; }
@@ -457,13 +477,8 @@
             .pricing-card.featured { transform: none; }
             .iframe-container { height: 400px; }
             .print-controls { 
-                top: auto; 
-                bottom: 90px; 
-                right: 10px;
-                left: 10px;
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: center;
+                top: auto; bottom: 90px; right: 10px; left: 10px;
+                flex-direction: row; flex-wrap: wrap; justify-content: center;
             }
             .print-btn { flex: 1; min-width: 140px; justify-content: center; padding: 10px 16px; font-size: 0.85rem; }
             .print-info { display: none; }
@@ -480,6 +495,8 @@
             .timeline-item { gap: 1rem; }
             .floating-whatsapp { bottom: 1rem; right: 1rem; width: 50px; height: 50px; }
             .back-to-top { bottom: 5rem; right: 1rem; }
+            .fleet-highlight { flex-direction: column; align-items: center; text-align: center; }
+            .fleet-benefits { justify-content: center; }
         }
 
         @media (max-width: 480px) {
@@ -524,6 +541,7 @@
             #solusi { background: #D1FAE5 !important; }
             section[style*="background: var(--primary)"] { background: #047857 !important; color: white !important; }
             section[style*="background: var(--primary)"] h2, section[style*="background: var(--primary)"] p { color: white !important; }
+            .fleet-highlight { background: #ECFDF5 !important; border: 2px solid #10B981 !important; }
             body::after { content: "CV REZEKI AMANAH JAYA GROUP - Waste Management Solution Proposal | Page " counter(page) !important; position: fixed !important; bottom: 0 !important; left: 2.5cm !important; right: 2.5cm !important; font-size: 9pt !important; color: #666 !important; text-align: center !important; border-top: 1px solid #ddd !important; padding-top: 0.5cm !important; }
         }
     </style>
@@ -532,7 +550,6 @@
 
     <div class="loader" id="loader"><div class="loader-spinner"></div></div>
 
-    <!-- Download & Print Controls -->
     <div class="print-controls no-print">
         <a href="RAJ_Integrated_Waste_Management_Proposal_The_Hood.pdf" 
            download="RAJ_Integrated_Waste_Management_Proposal_The_Hood.pdf" 
@@ -554,10 +571,8 @@
         </div>
     </div>
 
-    <!-- Mobile Menu Overlay -->
     <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
 
-    <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
         <ul>
             <li><a href="#about" data-en="About Us" data-id="Tentang Kami" onclick="closeMobileMenu()">About Us</a></li>
@@ -757,10 +772,29 @@
                 <p data-en="Flexible solutions tailored to your operational needs and sustainability goals." data-id="Solusi fleksibel yang disesuaikan dengan kebutuhan operasional dan tujuan keberlanjutan Anda.">Flexible solutions tailored to your operational needs and sustainability goals.</p>
             </div>
             <div class="grid grid-2 reveal" style="max-width: 900px; margin: 0 auto;">
+                <!-- Package A -->
                 <div class="card pricing-card">
                     <h3 data-en="PACKAGE A" data-id="PAKET A">PACKAGE A</h3>
                     <p style="color: var(--text-muted);" data-en="Essential Waste Transport" data-id="Transport Sampah Esensial">Essential Waste Transport</p>
                     <div class="price">Rp1.968.000<span data-en="/day excl. VAT" data-id="/hari excl. PPN">/day excl. VAT</span></div>
+                    
+                    <!-- ARM ROLL BOX HIGHLIGHT -->
+                    <div class="fleet-highlight">
+                        <div class="fleet-highlight-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"/></svg>
+                        </div>
+                        <div class="fleet-highlight-content">
+                            <h5 data-en=" Closed Arm Roll Box Fleet" data-id="🚛 Armada Arm Roll Box Tertutup">🚛 Closed Arm Roll Box Fleet</h5>
+                            <p data-en="Fully enclosed container prevents waste spillage, odor leakage, and protects from weather conditions." data-id="Wadah tertutup penuh mencegah sampah berhamburan, kebocoran bau, dan terlindungi dari cuaca.">Fully enclosed container prevents waste spillage, odor leakage, and protects from weather conditions.</p>
+                            <div class="fleet-benefits">
+                                <span class="fleet-benefit-tag" data-en="No Spillage" data-id="Tidak Berhamburan">No Spillage</span>
+                                <span class="fleet-benefit-tag" data-en="Odor Control" data-id="Kontrol Bau">Odor Control</span>
+                                <span class="fleet-benefit-tag" data-en="Weather Proof" data-id="Tahan Cuaca">Weather Proof</span>
+                                <span class="fleet-benefit-tag" data-en="Clean & Tidy" data-id="Bersih & Rapi">Clean & Tidy</span>
+                            </div>
+                        </div>
+                    </div>
+
                     <ul class="feature-list">
                         <li><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span data-en="Waste collection from TPS" data-id="Pengumpulan sampah dari TPS">Waste collection from TPS</span></li>
                         <li><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span data-en="Transport to TPA" data-id="Transport ke TPA">Transport to TPA</span></li>
@@ -768,11 +802,32 @@
                         <li><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span data-en="Loading & Documentation" data-id="Pemuatan & Dokumentasi">Loading & Documentation</span></li>
                     </ul>
                 </div>
+
+                <!-- Package B -->
                 <div class="card pricing-card featured">
                     <div class="ribbon" data-en="Best Value" data-id="Nilai Terbaik">Best Value</div>
                     <h3 data-en="PACKAGE B" data-id="PAKET B">PACKAGE B</h3>
                     <p style="color: var(--primary); font-weight: 600;" data-en="Integrated Waste Management" data-id="Pengelolaan Sampah Terpadu">Integrated Waste Management</p>
                     <div class="price">Rp2.690.000<span data-en="/day excl. VAT" data-id="/hari excl. PPN">/day excl. VAT</span></div>
+                    
+                    <!-- ARM ROLL BOX HIGHLIGHT -->
+                    <div class="fleet-highlight">
+                        <div class="fleet-highlight-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"/></svg>
+                        </div>
+                        <div class="fleet-highlight-content">
+                            <h5 data-en=" Closed Arm Roll Box Fleet" data-id=" Armada Arm Roll Box Tertutup"> Closed Arm Roll Box Fleet</h5>
+                            <p data-en="Fully enclosed container prevents waste spillage, odor leakage, and protects from weather conditions." data-id="Wadah tertutup penuh mencegah sampah berhamburan, kebocoran bau, dan terlindungi dari cuaca.">Fully enclosed container prevents waste spillage, odor leakage, and protects from weather conditions.</p>
+                            <div class="fleet-benefits">
+                                <span class="fleet-benefit-tag" data-en="No Spillage" data-id="Tidak Berhamburan">No Spillage</span>
+                                <span class="fleet-benefit-tag" data-en="Odor Control" data-id="Kontrol Bau">Odor Control</span>
+                                <span class="fleet-benefit-tag" data-en="Weather Proof" data-id="Tahan Cuaca">Weather Proof</span>
+                                <span class="fleet-benefit-tag" data-en="Clean & Tidy" data-id="Bersih & Rapi">Clean & Tidy</span>
+                                <span class="fleet-benefit-tag" data-en="ESG Compliant" data-id="Sesuai Standar ESG">ESG Compliant</span>
+                            </div>
+                        </div>
+                    </div>
+
                     <ul class="feature-list">
                         <li><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><strong data-en="All Package A Features" data-id="Semua Fitur Paket A">All Package A Features</strong></li>
                         <li><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span data-en="TPS 3R Processing & Sorting" data-id="Pemrosesan & Pemilahan TPS 3R">TPS 3R Processing & Sorting</span></li>
@@ -797,6 +852,7 @@
                         <tr><td data-en="TPS 3R Processing" data-id="Pemrosesan TPS 3R">TPS 3R Processing</td><td><svg class="cross-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></td><td><svg class="check-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></td></tr>
                         <tr><td data-en="ESG Reporting" data-id="Pelaporan ESG">ESG Reporting</td><td><svg class="cross-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></td><td><svg class="check-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></td></tr>
                         <tr><td data-en="Dedicated Account Manager" data-id="Account Manager Khusus">Dedicated Account Manager</td><td><svg class="cross-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></td><td><svg class="check-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></td></tr>
+                        <tr><td data-en="Closed Arm Roll Box Fleet" data-id="Armada Arm Roll Box Tertutup">Closed Arm Roll Box Fleet</td><td><svg class="cross-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></td><td><svg class="check-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></td></tr>
                     </tbody>
                 </table>
             </div>
@@ -951,17 +1007,13 @@
     <script>
         document.getElementById('current-date').textContent = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 
-        // HAMBURGER MENU
         function toggleMobileMenu() {
             const hamburger = document.getElementById('hamburger');
             const mobileMenu = document.getElementById('mobileMenu');
             const overlay = document.getElementById('mobileMenuOverlay');
-            
             hamburger.classList.toggle('active');
             mobileMenu.classList.toggle('active');
             overlay.classList.toggle('active');
-            
-            // Prevent body scroll when menu is open
             if (mobileMenu.classList.contains('active')) {
                 document.body.style.overflow = 'hidden';
             } else {
@@ -973,24 +1025,15 @@
             const hamburger = document.getElementById('hamburger');
             const mobileMenu = document.getElementById('mobileMenu');
             const overlay = document.getElementById('mobileMenuOverlay');
-            
             hamburger.classList.remove('active');
             mobileMenu.classList.remove('active');
             overlay.classList.remove('active');
             document.body.style.overflow = '';
         }
 
-        // Close menu when clicking overlay
         document.getElementById('mobileMenuOverlay').addEventListener('click', closeMobileMenu);
+        window.addEventListener('resize', () => { if (window.innerWidth > 1024) closeMobileMenu(); });
 
-        // Close menu on window resize if open
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > 1024) {
-                closeMobileMenu();
-            }
-        });
-
-        // LANGUAGE TOGGLE
         function toggleLanguage() {
             const html = document.documentElement;
             const currentLang = html.getAttribute('lang');
@@ -998,11 +1041,7 @@
             html.setAttribute('lang', newLang);
             document.getElementById('lang-text').textContent = newLang === 'en' ? 'ID' : 'EN';
             document.querySelectorAll('[data-en][data-id]').forEach(el => {
-                if (newLang === 'en') {
-                    el.textContent = el.getAttribute('data-en');
-                } else {
-                    el.textContent = el.getAttribute('data-id');
-                }
+                el.textContent = newLang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-id');
             });
             localStorage.setItem('lang', newLang);
         }
@@ -1010,10 +1049,8 @@
         const savedLang = localStorage.getItem('lang') || 'en';
         if (savedLang === 'id') toggleLanguage();
 
-        // LOADING
         window.addEventListener('load', () => { setTimeout(() => { document.getElementById('loader').classList.add('hidden'); }, 500); });
 
-        // DARK MODE
         function toggleTheme() {
             const html = document.documentElement;
             const currentTheme = html.getAttribute('data-theme');
@@ -1024,7 +1061,6 @@
         const savedTheme = localStorage.getItem('theme') || 'light';
         document.documentElement.setAttribute('data-theme', savedTheme);
 
-        // SCROLL REVEAL
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -1049,14 +1085,12 @@
         }, { root: null, rootMargin: '0px', threshold: 0.1 });
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-        // BACK TO TOP
         window.addEventListener('scroll', () => {
             const backToTop = document.querySelector('.back-to-top');
             if (window.pageYOffset > 500) backToTop.classList.add('visible');
             else backToTop.classList.remove('visible');
         });
 
-        // ECOTRACK IFRAME
         function loadEcoTrack() {
             const iframe = document.getElementById('ecotrackIframe');
             const placeholder = document.getElementById('iframePlaceholder');
@@ -1076,7 +1110,6 @@
 
         function showLiveDemo() { document.querySelector('.iframe-container').scrollIntoView({ behavior: 'smooth' }); setTimeout(() => loadEcoTrack(), 500); }
 
-        // SMOOTH SCROLL
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
